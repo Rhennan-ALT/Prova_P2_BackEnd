@@ -1,0 +1,17 @@
+# Configurações e Segredos
+.env
+
+# Cache do Python
+__pycache__/
+*.pyc
+
+# Ambientes Virtuais
+venv/
+.venv/
+env/
+
+# Cache de Testes 
+.pytest_cache/
+
+# Arquivos de log locais
+*.log
