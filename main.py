@@ -6,7 +6,7 @@ from sqlalchemy.orm import declarative_base, sessionmaker, Session
 
 # database
 
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://postgres:postgres@localhost:5432/dev_db")
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://admin:admin@localhost:5432/dev_db")
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autoflush=False, autocommit=False, bind=engine)
 Base = declarative_base()
@@ -48,14 +48,14 @@ app = FastAPI()
 def get_db():
     db = SessionLocal()
     try:
-        yield
+        yield db
     finally:
         db.close()
 
 # pesquisa geral
 
 @app.get("/produtos", response_model=list[RespostaP], status_code=status.HTTP_200_OK)
-def listar_p(db: Session = Depends(get_db)):
+def listar_produto(db: Session = Depends(get_db)):
     return db.query(Produto).all()
 
 # pesquisa por id 
