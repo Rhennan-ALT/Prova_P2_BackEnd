@@ -15,3 +15,6 @@ env/
 
 # Arquivos de log locais
 *.log
+
+# chache pytest
+.coverage
