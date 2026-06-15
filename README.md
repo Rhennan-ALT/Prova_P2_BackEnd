@@ -1,4 +1,10 @@
 # API de Produtos
+![Python](https://img.shields.io/badge/python-3.12-blue.svg)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.110.0-009688.svg)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-336791.svg)
+![Docker](https://img.shields.io/badge/Docker-compose-2496ED.svg)
+![Pytest](https://img.shields.io/badge/Pytest-9.1-0A9EDC.svg)
+
 ---
 
 ## Subindo os bancos PostgreSQL
