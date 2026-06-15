@@ -18,6 +18,12 @@ docker-compose up -d
 ```bash
 pytest -v
 ```
+
+## Executando testes com cobertura
+```bash
+pytest --cov=main -v
+```
+
 ## Executando servidor local 
 ```bash
 uvicorn main:app --reload
@@ -45,3 +51,16 @@ Base.metadata.drop_all()
 ```
 
 Dessa forma cada teste executa em um banco limpo, sem depender dos dados criados por outros testes.
+
+---
+
+## Tecnologias e Ferramentas
+
+```text
+- Python 3.12
+- FastAPI (Framework web de alta performance)
+- SQLAlchemy (ORM para mapeamento do banco)
+- PostgreSQL 16 (Banco de dados relacional)
+- Docker & Docker Compose (Conteinerização)
+- Pytest (Framework de testes automatizados)
+```
